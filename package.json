@@ -1,0 +1,33 @@
+{
+  "name": "cardgames",
+  "version": "1.0.0",
+  "description": "Game Of Cards",
+  "main": "index.js",
+  "author": "coder@judioo.com",
+  "license": "ISC",
+  "scripts": {
+    "test:coverage": "jest --coverage",
+    "test:coverage:report": "yarn run jest -- --coverage",
+    "test:watch": "yarn run jest --watch",
+    "test:watch:coverage": "yarn run jest --watch --coverage",
+    "test:watchall": "yarn run jest --watchAll",
+    "test:watchall:coverage": "yarn run jest --watchAll --coverage",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": -10
+      }
+    }
+  }
+}
